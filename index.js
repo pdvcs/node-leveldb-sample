@@ -2,7 +2,7 @@ const axios = require("axios")
 const level = require("level")
 const path = require("path")
 
-var dbPath = process.env.DB_PATH || path.join("/tmp/nodelev", "swdb")
+var dbPath = process.env.DBDIR || path.join("/tmp/node-leveldb-sample", "swdb")
 var db = level(dbPath, { keyEncoding: "binary", valueEncoding: "json" })
 
 async function sleep(ms) {
